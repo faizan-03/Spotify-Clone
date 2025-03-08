@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+  
+  html {
+    background-color: theme('colors.base-100');
+    color: theme('colors.base-content');
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .sidebar-icon {
+    @apply h-6 w-6 text-base-content opacity-60 hover:text-base-content hover:opacity-100 transition-colors;
+  }
+  
+  .player-button {
+    @apply h-8 w-8 text-base-content hover:scale-110 transition-transform;
+  }
+  
+  .playlist-card {
+    @apply bg-base-200 p-4 rounded-lg hover:bg-base-300 transition-colors duration-300;
+  }
+  
+  .progress-bar {
+    @apply h-1 rounded-full bg-base-content opacity-30;
+  }
+  
+  .progress-bar-fill {
+    @apply h-full rounded-full bg-base-content hover:bg-primary transition-colors;
+  }
+}
+
+/* Apply theme colors to all components */
+.app-container {
+  @apply bg-base-100 text-base-content;
+}
+
+.sidebar {
+  @apply bg-base-200 text-base-content;
+}
+
+.main-content {
+  @apply bg-base-100 text-base-content;
+}
+
+.player {
+  @apply bg-base-300 text-base-content;
+}
+
+.button-primary {
+  @apply bg-primary text-primary-content hover:bg-primary hover:brightness-110;
+}
+
+.button-secondary {
+  @apply bg-base-200 text-base-content hover:bg-base-300;
+}
+
+.card {
+  @apply bg-base-200 hover:bg-base-300;
+}
+
+.input {
+  @apply bg-base-200 text-base-content placeholder:text-base-content placeholder:opacity-60;
+}
+
+.dropdown-content {
+  @apply bg-base-200 text-base-content;
+}
+
+.hover-effect {
+  @apply hover:bg-base-300 transition-colors;
+}
+
+/* Text opacity utilities */
+.text-secondary {
+  @apply text-base-content opacity-60 hover:opacity-100 transition-opacity;
+}
+
+.text-tertiary {
+  @apply text-base-content opacity-40 hover:opacity-100 transition-opacity;
+}
